@@ -27,7 +27,7 @@ namespace modem // advanced.ts
         let parity = 0, bBit: boolean
         let array_10bit: boolean[] = [true, true, true, true, true, true, true, true, true, true]
         // [0] 1 START Bit = wahr (Licht an) [1]..[7] 7 Daten Bit 2 ^ 0..2 ^ 6
-        for (let i = 1; i < 7; i++) {
+        for (let i = 1; i <= 7; i++) {
             if ((ascii_code & 0x01) == 1) { // Bit 2^0 ist 1
                 array_10bit[i] = false
                 parity++
