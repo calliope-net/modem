@@ -129,7 +129,7 @@ namespace modem // modem.ts
     //% group="Empfangen (Fototransistor)"
     //% block="Empfangen abbrechen || %abbrechen" weight=2
     //% abbrechen.shadow=toggleYesNo abbrechen.defl=1
-    export function empfang_abbrechen(abbrechen: boolean) {
+    export function empfang_abbrechen(abbrechen = true) {
         n_empf_abbrechen = abbrechen
     }
 
