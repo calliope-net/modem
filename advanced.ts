@@ -141,10 +141,10 @@ namespace modem // advanced.ts
             //empf_pause_ms = input.runningTime() + n_takt_ms * n_startBitTime // 0.5 oder 0.45 zwischen Beginn Startbit und einlesen
             if (n_empf_abbrechen)
                 break // kann vom Bedienfeld abgebrochen werden
-             if (q_takt_ms >= 50)
-                 basic.pause(10) // ohne Pause funktioniert das Abbruch Ereignis nicht (z.B. Knopf A halten)
-             else
-                 basic.pause(q_takt_ms * 0.1)
+            if (q_takt_ms >= 50)
+                basic.pause(10) // ohne Pause funktioniert das Abbruch Ereignis nicht (z.B. Knopf A halten)
+            else
+                basic.pause(q_takt_ms * 0.1)
         }
         if (!n_empf_abbrechen) {
             // Daten empfangen
