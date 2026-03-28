@@ -163,9 +163,29 @@ namespace modem // advanced.ts
 
 
 
+    // ========== group="Funktionen" advanced=true blockGap=8
+
+    //% group="Funktionen" advanced=true
+    //% block="%array_10bit to Bin-String" weight=5
+    export function array_tostring(array_10bit: boolean[]): string {
+        let bin_string = ""
+        if (array_10bit && array_10bit.length > 0) {
+            for (let i = 0; i < array_10bit.length; i++) {
+                bin_string += array_10bit[i] ? "0" : "1"
+                if (i == 0 || i == 7)
+                    bin_string += "^"
+            }
+        }
+        return bin_string
+    }
 
 
 
+    //% group="Funktionen" advanced=true
+    //% block="%i0 zwischen %i1 und %i2" weight=4
+    export function between(i0: number, i1: number, i2: number): boolean {
+        return (i0 >= i1 && i0 <= i2)
+    }
 
 
 
@@ -176,12 +196,4 @@ namespace modem // advanced.ts
     export function comment(text: string): void { }
 
 
-
-    // ========== group="Funktionen" advanced=true blockGap=8
-
-    //% group="Funktionen" advanced=true
-    //% block="%i0 zwischen %i1 und %i2" weight=5
-    export function between(i0: number, i1: number, i2: number): boolean {
-        return (i0 >= i1 && i0 <= i2)
-    }
 } // advanced.ts
