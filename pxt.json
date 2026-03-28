@@ -1,6 +1,6 @@
 {
     "name": "modem",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Erweiterung: asynchrone serielle Datenübertragung mit Licht nach RS-232 (7 Bit ASCII)",
     "dependencies": {
         "core": "*"
