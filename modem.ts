@@ -18,7 +18,8 @@ namespace modem // modem.ts
     let q_pin_fototransistor: AnalogPin = AnalogPin.P2 // dunkel~860 / hell~20 / Calliope v2
     let q_helligkeit: number = 150
     export let q_takt_ms: number = 400 // Takt zwischen 2 Calliope: 20ms / zum BT Smart Controller: 400ms
-    export let q_start_bit_time: number = 0.45 // 0.5 oder 0.45 zwischen Beginn Startbit und einlesen
+    export let q_start_bit_time: number = 0.5 // 0.5 oder 0.45 zwischen Beginn Startbit und einlesen
+    export let q_stop_bits: number = 1
     export let n_empf_abbrechen: boolean = false // warten auf Startbit beim Empfang abbrechen
 
 
@@ -35,12 +36,14 @@ namespace modem // modem.ts
     }
 
     //% group="asynchrone serielle Datenübertragung mit Licht"
-    //% block="Takt: %takt_ms ms || Startbit Time %start_bit_time" weight=4
+    //% block="Takt: %takt_ms ms || Startbit * %start_bit_time Stopbits * %stop_bits" weight=4
     //% takt_ms.min=20 takt_ms.max=1000 takt_ms.defl=400
     //% start_bit_time.defl=0.5
-    export function set_takt(takt_ms: number, start_bit_time = 0.5) {
+    //% stop_bits.min=1 stop_bits.max=6 stop_bits.defl=1
+    export function set_takt(takt_ms: number, start_bit_time = 0.5, stop_bits = 1) {
         q_takt_ms = takt_ms
         q_start_bit_time = start_bit_time
+        q_stop_bits = stop_bits
     }
 
 

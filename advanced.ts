@@ -61,16 +61,14 @@ namespace modem // advanced.ts
         // 10 Bit aus Array senden: 1 Start, 7 Daten 2 ^ 0..2 ^ 6, 1 Parität, 1 Stop - Bit
         for (let i = 0; i < array_10bit.length; i++) {
             sende_1bit(array_10bit[i]) // 7 Datenbits + 1 Paritätsbit
-            /*   if (array_10bit[i])
-                  pins.digitalWritePin(n_pinLED, 1)
-              else
-                  pins.digitalWritePin(n_pinLED, 0) */
+
             basic.pause(send_pause_ms - input.runningTime())
             send_pause_ms += q_takt_ms
         }
 
         // STOP Bit verlängern als Pause (Licht aus)
-        basic.pause(send_pause_ms - input.runningTime())
+        //basic.pause(send_pause_ms - input.runningTime())
+        basic.pause(q_takt_ms * q_stop_bits)
     }
 
 
