@@ -1,6 +1,9 @@
 
 > Diese Seite bei [https://calliope-net.github.io/modem/](https://calliope-net.github.io/modem/) öffnen
 
+![](png/rs232.png)
+
+
 ## Als Erweiterung verwenden
 
 Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
