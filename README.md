@@ -22,7 +22,7 @@ Zum Beispiel wird der Buchstabe `K` codiert in `(0)1 0 0 1 0 1 1`.\
 Diese 7 Bit werden einzeln ← von links nach rechts ← gesendet.\
 Im folgenden Bild stehen die 7 gelben Bits `1 1 0 1 0 0 1` b0 bis b6 für das Zeichen `K`.
 
-Die dicke schwarze Linie unten (Idle) bedeutet `Licht aus`, oben `Licht an`.
+Ist die dicke schwarze Linie unten (Idle) bedeutet das `Licht aus`, oben `Licht an`.
 Der Abstand zwischen den dünnen schwarzen Linien ist die Zeit, wie lange das Licht für ein Bit an oder aus ist.
 
 Wenn nichts übertragen wird, ist das Licht aus. Jedes Zeichen beginnt mit Licht an (grünes Start-Bit). 
