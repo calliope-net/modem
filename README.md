@@ -19,7 +19,7 @@ Die ASCII Codierung der Buchstaben, Ziffern und sonstigen Zeichen steht in der [
 Die 128 Zeichen mit dem Code 0 bis 127 werden in 7 Bit = 7 Nullen oder Einsen codiert. Das achte Bit ist beim ASCII Code immer 0.
 
 Zum Beispiel wird der Buchstabe `K` codiert in `(0)1 0 0 1 0 1 1`. Diese 7 Bit werden einzeln ← von links nach rechts ← gesendet. 
-Im folgenden Bild sind das die gelben Bits `1 1 0 1 0 0 1` b0 bis b6 für das Zeichen `K`.
+Im folgenden Bild sind das die 7 gelben Bits `1 1 0 1 0 0 1` b0 bis b6 für das Zeichen `K`.
 
 
 
