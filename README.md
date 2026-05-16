@@ -5,14 +5,14 @@
 ### asynchrone serielle Datenübertragung nach [RS-232](https://de.wikipedia.org/wiki/RS-232)
 
 Die 60 Jahre alte Methode, Nullen und Einsen zwischen zwei Computern zu übertragen, funktioniert auch mit Licht. 
-Wie bei einer Lichtschranke wird jedes Bit als Licht an oder Licht aus übertragen. 
+Wie bei einer Lichtschranke wird jedes Bit als `Licht an` oder `Licht aus` übertragen. 
 
 LED als Sender und Fototransistor als Empfänger sind aber an verschiedene Computer angeschlossen.
 Geeignet sind alle Controller, die LED und Fototransistor ansteuern können. Dazu gehören Calliope und sämtliche fischertechnik Controller.
 Damit können Bytes zwischen verschiedenen Systemen übertragen werden, die sonst nicht kompatibel sind.
 
 Die hier beschriebenen Programme übertragen 7-Bit ASCII Zeichen. Für die Eingabe von Text beim Sender und die Ausgabe / Anzeige beim Empfänger haben die Controller unterschiedliche Möglichkeiten. 
-Für die Ansteuerung von Tastaturen und Displays sind für ale Controller (I²C) Erweiterungen verfügbar.
+Für die Ansteuerung von Tastaturen und Displays sind für alle Controller (I²C) Erweiterungen verfügbar.
 
 
 
