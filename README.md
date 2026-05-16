@@ -15,7 +15,7 @@ Die hier beschriebenen Programme übertragen 7-Bit ASCII Zeichen. Für die Einga
 Für die Ansteuerung von Tastaturen und Displays sind für alle Controller (I²C)-Erweiterungen verfügbar.
 Die Erweiterung Modem kümmert sich nur um die Übertragung von Text-Zeichen, nicht um die Ein- und Ausgabe.
 
-
+Die ASCII Codierung der Buchstaben, Ziffern und sonstigen Zeichen steht in der [Codetabelle](png/codetabelle.pdf).
 
 
 ![](png/rs232.png)
