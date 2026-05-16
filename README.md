@@ -33,6 +33,9 @@ Beim `L` `(0)1 0 0 1 1 0 0` ← von links nach rechts ← `0 0 1 1 0 0 1` sind 3
 
 Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeichen kann beliebig lang sein.
 
+Bei `Licht an` erkennt der Empfänger den Beginn einer Übertragung. Nach einer halben Taktzeit beginnt er die 10 Bit immer in der Mitte abzutasten.
+So werden kleine Unterschiede zwischen den Controllern ausgeglichen. Man nennt das asynchron. 
+
 
 
 
