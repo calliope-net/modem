@@ -1,7 +1,8 @@
 
 > Diese Seite bei [https://calliope-net.github.io/modem/](https://calliope-net.github.io/modem/) öffnen
 
-# Datenübertragung mit Licht (RS-232 / Modem)
+# Datenübertragung mit Licht - Modem
+## asynchrone serielle Datenübertragung nach [RS-232](https://de.wikipedia.org/wiki/RS-232)
 
 
 ![](png/rs232.png)
