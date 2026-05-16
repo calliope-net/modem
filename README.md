@@ -13,7 +13,7 @@ Damit können Bytes zwischen verschiedenen Systemen übertragen werden, die sons
 
 Die hier beschriebenen Programme übertragen 7-Bit ASCII Zeichen. Für die Eingabe von Text beim Sender und die Ausgabe / Anzeige beim Empfänger haben die Controller unterschiedliche Möglichkeiten. 
 Für die Ansteuerung von Tastaturen und Displays sind für alle Controller (I²C)-Erweiterungen verfügbar.
-
+Die Erweiterung Modem kümmert sich nur um die Übertragung von Text-Zeichen, nicht um die Ein- und Ausgabe.
 
 
 
