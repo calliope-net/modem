@@ -18,7 +18,7 @@ Die Erweiterung Modem kümmert sich nur um die Übertragung von Text-Zeichen, ni
 Die ASCII Codierung der Buchstaben, Ziffern und sonstigen Zeichen steht in der [Codetabelle](png/ascii-0-127.pdf).
 Die 128 Zeichen mit dem Code 0 bis 127 werden in 7 Bit = 7 Nullen oder Einsen codiert. Das achte Bit ist beim ASCII Code immer 0.
 
-Zum Beispiel wird der Buchstabe `K` codiert in `01001011`.
+Zum Beispiel wird der Buchstabe `K` codiert in `0 1 0 0 1 0 1 1`.
 
 
 
