@@ -31,10 +31,10 @@ Dann folgen die 7 (gelben) Daten-Bits b0 bis b6. Das (lila) Parity-Bit erkennt �
 Das Parity-Bit wird so gesetzt, dass die Anzahl Einsen eine gerade Zahl ergibt. Beim `K` sind 4 Einsen (b0 b1 b3 b6) vorhanden, Parity ist 0.
 Beim `L` `(0)1 0 0 1 1 0 0` ← von links nach rechts ← `0 0 1 1 0 0 1` sind 3 Einsen vorhanden, Parity ist 1. (3 ist keine gerade Zahl, aber 4).
 
-Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeichen kann beliebig lang sein.
-
 Bei `Licht an` erkennt der Empfänger den Beginn einer Übertragung. Nach einer halben Taktzeit beginnt er die 10 Bit immer in der Mitte abzutasten.
 So werden kleine Unterschiede zwischen den Controllern ausgeglichen. Man nennt das asynchron. 
+
+Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeichen kann beliebig lang sein.
 
 
 
