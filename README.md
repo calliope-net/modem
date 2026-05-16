@@ -11,6 +11,9 @@ LED als Sender und Fototransistor als Empfänger sind aber an verschiedene Compu
 Geeignet sind alle Controller, die LED und Fototransistor ansteuern können. Dazu gehören Calliope und sämtliche fischertechnik Controller.
 Damit können Bytes zwischen verschiedenen Systemen übertragen werden, die sonst nicht kompatibel sind.
 
+Die hier beschriebenen Programme übertragen 7-Bit ASCII Zeichen. Für die Eingabe von Text beim Sender und die Ausgabe / Anzeige beim Empfänger haben die Controller unterschiedliche Möglichkeiten. 
+Für die Ansteuerung von Tastaturen und Displays sind für ale Controller (I²C) Erweiterungen verfügbar.
+
 
 
 
