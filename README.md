@@ -6,7 +6,13 @@
 
 Die 60 Jahre alte Methode, Nullen und Einsen zwischen zwei Computern zu übertragen, funktioniert auch mit Licht. 
 Wie bei einer Lichtschranke wird jedes Bit als Licht an oder Licht aus übertragen. 
+
 LED als Sender und Fototransistor als Empfänger sind aber an verschiedene Computer angeschlossen.
+Geeignet sind alle Controller, die LED und Fototransistor ansteuern können. Dazu gehören Calliope und sämtliche fischertechnik Controller.
+Damit können Bytes zwischen verschiedenen Systemen übertragen werden, die sonst nicht kompatibel sind.
+
+
+
 
 
 ![](png/rs232.png)
