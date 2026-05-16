@@ -4,6 +4,10 @@
 # Modem - Datenübertragung mit Licht
 ### asynchrone serielle Datenübertragung nach [RS-232](https://de.wikipedia.org/wiki/RS-232)
 
+Die 60 Jahre alte Methode, Nullen und Einsen zwischen zwei Computern zu übertragen, funktioniert auch mit Licht. 
+Wie bei einer Lichtschranke wird jedes Bit als Licht an oder Licht aus übertragen. 
+LED als Sender und Fototransistor als Empfänger sind aber an verschiedene Computer angeschlossen.
+
 
 ![](png/rs232.png)
 
