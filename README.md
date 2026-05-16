@@ -21,7 +21,7 @@ Die 128 Zeichen mit dem Code 0 bis 127 werden in 7 Bit = 7 Nullen oder Einsen co
 Zum Beispiel wird der Buchstabe `K` codiert in `(0)1 0 0 1 0 1 1`. Diese 7 Bit werden einzeln ← von links nach rechts ← gesendet. 
 Im folgenden Bild stehen die 7 gelben Bits `1 1 0 1 0 0 1` b0 bis b6 für das Zeichen `K`.
 
-Die Kurve unten (Idle) bedeutet `Licht aus`, oben `Licht an`.
+Die dicke schwarze Linie unten (Idle) bedeutet `Licht aus`, oben `Licht an`.
 
 
 ![](png/rs232.png)
