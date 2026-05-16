@@ -12,7 +12,7 @@ Geeignet sind alle Controller, die LED und Fototransistor ansteuern können. Daz
 Damit können Bytes zwischen verschiedenen Systemen übertragen werden, die sonst nicht kompatibel sind.
 
 Die hier beschriebenen Programme übertragen 7-Bit ASCII Zeichen. Für die Eingabe von Text beim Sender und die Ausgabe / Anzeige beim Empfänger haben die Controller unterschiedliche Möglichkeiten. 
-Für die Ansteuerung von Tastaturen und Displays sind für alle Controller (I²C) Erweiterungen verfügbar.
+Für die Ansteuerung von Tastaturen und Displays sind für alle Controller (I²C)-Erweiterungen verfügbar.
 
 
 
