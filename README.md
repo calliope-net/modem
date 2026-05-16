@@ -29,7 +29,7 @@ Wenn nichts übertragen wird, ist das Licht aus. Jedes Zeichen beginnt mit Licht
 Dann folgen die 7 (gelben) Daten-Bits b0 bis b6. Das (lila) Parity-Bit erkennt Übertragungsfehler. Das (rote) Stop-Bit schaltet das Licht wieder aus.
 
 Das Parity-Bit wird so gesetzt, dass die Anzahl Einsen eine gerade Zahl ergibt. Beim `K` sind 4 Einsen (b0 b1 b3 b6) vorhanden, Parity ist 0.
-Beim `L` `(0)1 0 0 1 1 0 0` ← von links nach rechts ← `0 0 1 1 0 0 1` sind 3 Einsen vorhanden, Parity ist 1. (4 Einsen ist eine gerade Zahl).
+Beim `L` `(0)1 0 0 1 1 0 0` ← von links nach rechts ← `0 0 1 1 0 0 1` sind 3 Einsen vorhanden, Parity ist 1. (3 ist keine gerade Zahl, aber 4).
 
 Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeichen kann beliebig lang sein.
 
