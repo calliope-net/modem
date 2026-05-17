@@ -84,8 +84,8 @@ Block **empfange Text Zeile bis ↵ ENTER** : string
 > Mit der folgenden Funktion kann in einer eigenen Schleife erkannt werden, ob der Fototransistor hell ist, also der Empfang beginnt.
 
 Block **empfange 1 Bit (warten auf Startbit)** : boolean
-* Gibt True zurück, wenn der Fototransistor ein Start-Bit erkannt hat.
-* Danach muss sofort **empfange 1 Zeichen** oder **empfange Text** aufgerufen werden.
+* Gibt True zurück, wenn der Fototransistor ein Start-Bit erkannt hat. (blockiert nicht)
+* Danach muss sofort **empfange 1 Zeichen** oder **empfange Text** aufgerufen werden. (blockiert)
 
 Block **Empfangen abbrechen**
 * Kann eine blockierte Funktion **empfange** abbrechen.
@@ -97,7 +97,17 @@ Block **Empfangen abbrechen**
 
 ### Senden (ASCII Code 32..127)
 
-Block **ASCII Code aus Text** (text, index)
+Block **ASCII Code aus Text** (text, index) : number
+* Gibt den ASCII Code des (ersten) Zeichens in *text* zurück.
+* Bei mehreren Zeichen gibt der *index* die Position des Zeichens in *text* an.
+
+Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
+* Gibt ein Array mit 10 boolean Elementen (wahr/falsch) zurück.
+* 1 Start, 7 Daten 2^0..2^6, 1 Parität, 1 Stop-Bit
+* negative Logik: 0=wahr und 1=falsch
+* Bedeutung ist im Bild oben erklärt.
+
+
 
 
 ## Als Erweiterung verwenden
