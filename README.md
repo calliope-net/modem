@@ -141,7 +141,7 @@ Block **Array von ... to Bin-String** : string
 * Dient nur zur Anzeige, wird nicht zur Datenübertragung benötigt.
 * Nach Bit 0 und 7 wird ein ^ eingefügt zur Abgrenzung der Daten-Bits.
 
-Block **zwischen** (i0, i1, i2)
+Block **zwischen** (i0, i1, i2) : boolean
 * Gibt wahr zurück, wenn *i0* zwischen *i1* und *i2* liegt.
 
 Block **Kommentar** (text)
