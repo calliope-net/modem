@@ -39,7 +39,9 @@ Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeiche
 
 ![](png/rs232.png)
 
-### Blöcke
+## Blöcke
+
+### beim Start
 
 Block: **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
 
@@ -50,7 +52,7 @@ Block: **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
 Block: **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
 
 * Definiert beim Start die Zeit, wie lange ein Bit "leuchtet".
-* optional *takt_ms*: Millisekunden default=400
+* optional *takt_ms*: Millisekunden default=400 ms
 * optional *start_bit_time*, *stop_bits*
 
 
