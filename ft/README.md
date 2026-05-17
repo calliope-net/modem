@@ -24,6 +24,7 @@ Block **ascii_sende_text_mit13** (text, mit_log)
 
 Block **ascii_empfange_code** : number
 * Wartet auf Start-Bit und gibt nach Empfang den ASCII-Code (0..127) zurück.
+* Zeigt Fehlercode in der Konsole oder auf dem TXT40 Display an.
 
 Fehlercode|Fehler
 ---|---
