@@ -49,8 +49,8 @@ Block **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
 * optional *helligkeit*: number default=150 
 
 Block **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
-* Definiert beim Start die Zeit, wie lange ein Bit "leuchtet".
-* optional *takt_ms*: Millisekunden default=400 ms
+* Definiert beim Start die Zeit, wie lange das Licht für ein Bit an oder aus ist.
+* *takt_ms*: Millisekunden default=400 ms
 * optional *start_bit_time*, *stop_bits*
 
 ### Senden (LED)
