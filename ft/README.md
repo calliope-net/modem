@@ -33,3 +33,14 @@ Fehlercode|Fehler
 -3|Parity-Bit Fehler
 -4|Stop-Bit Fehler
 
+Block **ascii_empfange_text_bis13** (mit_log) : string
+* *mit_log* = true: protokolliert jedes Zeichen in Konsole
+* Wartet auf Start-Bit und empfängt alle Zeichen bis ENTER (13).
+* Gibt dann den Text (ohne ENTER) zurück.
+* Gültige ASCII-Codes 32..127 werden in das Zeichen umgewandelt.
+* Ungültige und Fehler-Codes werden in den Text als \|-1\| oder \|27\| eingefügt.
+
+> Die zwei Funktionen **empfange** blockieren das Programm. Es reagiert nicht mehr, bis der Fototransistor ein Start-Bit (Licht an) empfangen hat.
+> Mit der folgenden Funktion kann in einer eigenen Schleife erkannt werden, ob der Fototransistor hell ist, also der Empfang beginnt.
+
+
