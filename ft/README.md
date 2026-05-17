@@ -5,8 +5,6 @@
 
 ## Blöcke für fischertechnik ROBO Pro Coding
 
-### Beschreibung der Quellcodedateien (alphabetisch geordnet)
-
 #### Quellcodedatei ascii.py
 
 ### Senden (LED)
