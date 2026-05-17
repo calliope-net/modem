@@ -78,13 +78,13 @@ Block **empfange Text Zeile bis ↵ ENTER** : string
 * Wartet auf Start-Bit und empfängt alle Zeichen bis ENTER (13).
 * Gibt dann den Text (ohne ENTER) zurück.
 * Gültige ASCII-Codes 32..127 werden in das Zeichen umgewandelt.
-* Ungültige und Fehler-Codes werden in den Text als \|-1\| oder \|27\| oder \|130\| eingefügt.
+* Ungültige und Fehler-Codes werden in den Text als \|-1\| oder \|27\| eingefügt.
 
 > Die zwei Funktionen **empfange** blockieren das Programm. Es reagiert nicht mehr, bis der Fototransistor ein Start-Bit (Licht an) empfangen hat.
 > Mit der folgenden Funktion kann in einer eigenen Schleife erkannt werden, ob der Fototransistor hell ist, also der Empfang beginnt.
 
 Block **empfange 1 Bit (warten auf Startbit)** : boolean
-* Gibt True zurück, wenn der Fototransistor ein Start-Bit erkannt hat. (blockiert nicht)
+* Gibt wahr zurück, wenn der Fototransistor ein Start-Bit erkannt hat. (blockiert nicht)
 * Danach muss sofort **empfange 1 Zeichen** oder **empfange Text** aufgerufen werden. (blockiert)
 
 Block **Empfangen abbrechen**
@@ -115,7 +115,16 @@ Block **sende Array von ...** (array_10bit: boolean[])
 * Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
 * Normalerweise wird als Parameter eine boolean[] Variable oder Funktion über das orange Array geschoben.
 
-  
+
+
+### Empfangen (1 Start, 7 Daten 2^0..2^6, 1 Parität, 1 Stop-Bit)
+
+Block **Text-Zeichen aus ASCII Code** (ascii_code) : string
+* Gibt das Zeichen zum *ascii_code* zurück. Genau 1 Zeichen.
+
+Block **ASCII Code aus Array von ...** (array_10bit: boolean[]) : number
+* Decodiert das Array mit 10 boolean Elementen (wahr/falsch) in den ASCII Code.
+* Bei Fehler werden die Codes -1 .. -4 in der Tabelle oben zurück gegeben.
 
 
 
