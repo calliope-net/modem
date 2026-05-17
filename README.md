@@ -37,11 +37,17 @@ So werden kleine Unterschiede zwischen den Controllern ausgeglichen. Man nennt d
 Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeichen kann beliebig lang sein. Der Empfänger erkennt an Start-, Parity- und Stop-Bit, ob das Zeichen gültig ist. Und decodiert die 7 Daten-Bit wieder zu einem ASCII Zeichen.
 
 
-
-
-
-
 ![](png/rs232.png)
+
+### Blöcke
+
+Block: **Pins:** (pin_led, pin_fototransistor, helligkeit)
+
+* Definiert beim Start die Pins für LED und Fototransistor.
+* *pin_led*: DigitalPin, *pin_fototransistor*: AnalogPin
+* optional *helligkeit*: number default=150 
+
+
 
 
 ## Als Erweiterung verwenden
