@@ -110,6 +110,13 @@ Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
 * negative Logik: 0=wahr und 1=falsch
 * Bedeutung ist im Bild oben erklärt.
 
+Block **sende Array von ...** (array_10bit: boolean[])
+* Sendet das *array_10bit* über die LED als `Licht an` oder `Licht aus`.
+* Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
+* Normalerweise wird als Parameter eine boolean[] Variable oder Funktion über das orange Array geschoben.
+
+  
+
 
 
 
