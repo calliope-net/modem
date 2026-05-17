@@ -43,7 +43,7 @@ Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeiche
 
 Block: **Pins:** (pin_led, pin_fototransistor, helligkeit)
 
-* Definiert beim Start die Pins für LED und Fototransistor.
+* Definiert beim Start die Pins für LED und Fototransistor und den Wert, wann der Fototransistor hell erkennt.
 * *pin_led*: DigitalPin, *pin_fototransistor*: AnalogPin
 * optional *helligkeit*: number default=150 
 
