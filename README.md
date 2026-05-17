@@ -113,7 +113,7 @@ Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
 Block **sende Array von ...** (array_10bit: boolean[])
 * Sendet das *array_10bit* über die LED als `Licht an` oder `Licht aus`.
 * Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
-* Normalerweise wird als Parameter eine boolean[] Variable oder Funktion über das orange Array geschoben.
+* Normalerweise wird als Parameter eine boolean[] Variable oder Funktion übergeben.
 
 
 
@@ -125,7 +125,13 @@ Block **Text-Zeichen aus ASCII Code** (ascii_code) : string
 Block **ASCII Code aus Array von ...** (array_10bit: boolean[]) : number
 * Decodiert das Array mit 10 boolean Elementen (wahr/falsch) in den ASCII Code.
 * Bei Fehler werden die Codes -1 .. -4 in der Tabelle oben zurück gegeben.
+* Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
+* Normalerweise wird als Parameter eine boolean[] Variable oder Funktion übergeben.
 
+Block **empfange 10 Bit Array** : boolean[]
+* Wartet auf Start-Bit und gibt nach Empfang das 10-bit-Array zurück.
+* Funktion blockiert und kann (in einem anderen Thread) abgebrochen werden.
+* Bei Abbruch hat das Array keine oder weniger als 10 Elemente.
 
 
 
