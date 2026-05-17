@@ -78,7 +78,7 @@ Block **empfange Text Zeile bis ↵ ENTER** : string
 * Wartet auf Start-Bit und empfängt alle Zeichen bis ENTER (13).
 * Gibt dann den Text (ohne ENTER) zurück.
 * Gültige ASCII-Codes 32..127 werden in das Zeichen umgewandelt.
-* Ungültige und Fehler-Codes werden in den Text als \|-1| oder |27| oder |130| eingefügt.
+* Ungültige und Fehler-Codes werden in den Text als \|-1\| oder \|27\| oder \|130\| eingefügt.
 
 > Die zwei Funktionen **empfange** blockieren das Programm. Es reagiert nicht mehr, bis der Fototransistor ein Start-Bit (Licht an) empfangen hat.
 > Mit der folgenden Funktion kann in einer eigenen Schleife erkannt werden, ob der Fototransistor hell ist, also der Empfang beginnt.
@@ -89,8 +89,8 @@ Block **empfange 1 Bit (warten auf Startbit)** : boolean
 
 Block **Empfangen abbrechen**
 * Kann eine blockierte Funktion **empfange** abbrechen.
-* Muss dazu in einem anderen Thread aufgerufen werden, z.B. *wenn Knopf B geklickt*.
-* Führt zum Fehlercode |-1|, weil keine Daten empfangen wurden.
+* Muss dazu in einem anderen Thread aufgerufen werden, z.B. **wenn Knopf B geklickt**.
+* Führt zum Fehlercode \|-1\|, weil keine Daten empfangen wurden.
 
 
 
