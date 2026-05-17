@@ -68,7 +68,7 @@ Block **empfange 1 Zeichen ASCII Code (oder Fehlercode)** : number
 * Wartet auf Start-Bit und gibt nach Empfang den ASCII-Code (0..127) zurück.
 * Fehlercodes:
 
----|---
+---|---|---
 -1|weniger als 10 Bit empfangen
 -2|Start-Bit Fehler
 -3|Parity-Bit Fehler
