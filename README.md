@@ -66,7 +66,6 @@ Block **sende Text Zeile mit ↵ ENTER** (text)
 
 Block **empfange 1 Zeichen ASCII Code (oder Fehlercode)** : number
 * Wartet auf Start-Bit und gibt nach Empfang den ASCII-Code (0..127) zurück.
-* Fehlercodes:
 
 Fehlercode|Fehler
 ---|---
@@ -76,6 +75,13 @@ Fehlercode|Fehler
 -4|Stop-Bit Fehler
 
 Block **empfange Text Zeile bis ↵ ENTER** : string
+* Wartet auf Start-Bit und empfängt alle Zeichen bis ENTER (13).
+* Gibt dann den Text (ohne ENTER) zurück.
+* Gültige ASCII-Codes 32..127 werden in das Zeichen umgewandelt.
+* Ungültige und Fehler-Codes werden im Text als |-1| oder |27| oder |130| angezeigt.
+
+
+
 
 
 ## Als Erweiterung verwenden
