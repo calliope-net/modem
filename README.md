@@ -43,17 +43,24 @@ Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeiche
 
 ### beim Start
 
-Block: **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
-
+Block **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
 * Definiert beim Start die Pins für LED und Fototransistor und den analogen Wert für hell.
 * *pin_led*: DigitalPin, *pin_fototransistor*: AnalogPin
 * optional *helligkeit*: number default=150 
 
-Block: **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
-
+Block **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
 * Definiert beim Start die Zeit, wie lange ein Bit "leuchtet".
 * optional *takt_ms*: Millisekunden default=400 ms
 * optional *start_bit_time*, *stop_bits*
+
+### Senden (LED)
+
+Block **sende 1 Zeichen ASCII Code** (ascii_code)
+* Sendet 1 Zeichen (Code)
+* *ascii_code*: 32..127 oder 13 für ENTER
+
+Block **sende Text Zeile mit ↵ ENTER** (text)
+* Sendet alle Zeichen aus *text* und hängt ENTER (13) an.
 
 
 
