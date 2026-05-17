@@ -93,6 +93,11 @@ Block **Empfangen abbrechen**
 * Führt zum Fehlercode \|-1\|, weil keine Daten empfangen wurden.
 
 
+## Blöcke (mehr)
+
+### Senden (ASCII Code 32..127)
+
+Block **ASCII Code aus Text** (text, index)
 
 
 ## Als Erweiterung verwenden
