@@ -1,5 +1,5 @@
 
-> Diese Seite bei [https://calliope-net.github.io/modem/](https://calliope-net.github.io/modem/ft/) öffnen
+> Diese Seite bei [https://calliope-net.github.io/modem/ft/](https://calliope-net.github.io/modem/ft/) öffnen
 
 # Modem - Datenübertragung mit Licht
 
