@@ -69,10 +69,10 @@ Block **empfange 1 Zeichen ASCII Code (oder Fehlercode)** : number
 * Fehlercodes:
 
 ---|---|---
--1|weniger als 10 Bit empfangen
--2|Start-Bit Fehler
--3|Parity-Bit Fehler
--4|Stop-Bit Fehler
+-1|weniger als 10 Bit empfangen|
+-2|Start-Bit Fehler|
+-3|Parity-Bit Fehler|
+-4|Stop-Bit Fehler|
 
 Block **empfange Text Zeile bis ↵ ENTER** : string
 
