@@ -95,6 +95,9 @@ Block **Empfangen abbrechen**
 
 ## Blöcke (mehr)
 
+> Mit den "advanced" Blöcken können die Programmschritte codieren, senden, empfangen, decodieren einzeln abgearbeitet werden. Für einfache "Datenübertragung mit Licht" sind die Blöcke nicht erforderlich.
+> Sie werden aber zur Fehlersuche gebraucht, oder um jedes gesendete oder empfangene Zeichen einzeln anzuzeigen. Oder um den Inhalt des 10-bit-Arrays zu verstehen.
+
 ### Senden (ASCII Code 32..127)
 
 Block **ASCII Code aus Text** (text, index) : number
