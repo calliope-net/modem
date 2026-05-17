@@ -20,3 +20,15 @@ Block **ascii_sende_text_mit13** (text, mit_log)
 
 
 
+### Empfangen (Fototransistor)
+
+Block **ascii_empfange_code** : number
+* Wartet auf Start-Bit und gibt nach Empfang den ASCII-Code (0..127) zurück.
+
+Fehlercode|Fehler
+---|---
+-1|weniger als 10 Bit empfangen
+-2|Start-Bit Fehler
+-3|Parity-Bit Fehler
+-4|Stop-Bit Fehler
+
