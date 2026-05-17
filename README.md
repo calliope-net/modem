@@ -134,6 +134,19 @@ Block **empfange 10 Bit Array** : boolean[]
 * Bei Abbruch hat das Array keine oder weniger als 10 Elemente.
 
 
+### Funktionen
+
+Block **Array von ... to Bin-String** : string
+* Konvertiert ein boolean[] Array in einen String aus Nullen und Einsen (wahr = 0 und falsch = 1).
+* Dient nur zur Anzeige, wird nicht zur Datenübertragung benötigt.
+* Nach Bit 0 und 7 wird ein ^ eingefügt zur Abgrenzung der Daten-Bits.
+
+Block **zwischen** (i0, i1, i2)
+* Gibt wahr zurück, wenn *i0* zwischen *i1* und *i2* liegt.
+
+Block **Kommentar** (text)
+* Einfügen von Kommentar in die Blöcke. Hat keine Funktion.
+
 
 ## Als Erweiterung verwenden
 
