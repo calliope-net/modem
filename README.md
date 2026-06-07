@@ -121,17 +121,23 @@ ROBO Pro Coding Block **ascii_abbrechen** (abbrechen)
 MakeCode Block **ASCII Code aus Text** (text, index) : number\
 ROBO Pro Coding Block **ascii_ord** (ascii_zeichen) : number
 
-* Gibt den ASCII Code des (ersten) Zeichens in *text* zurück.
-* Bei mehreren Zeichen gibt der *index* die Position des Zeichens in *text* an.
-* Bei ROBO Pro Coding darf nur genau 1 Zeichen (char) übergeben werden. Gibt 31 zurück, wenn nicht gefunden.
+* MakeCode
+  * Gibt den ASCII Code des (ersten) Zeichens in *text* zurück oder NaN wenn nicht gefunden.
+  * Bei mehreren Zeichen gibt der *index* die Position des Zeichens in *text* an.
+* ROBO Pro Coding
+  * Es darf nur genau 1 Zeichen (char) übergeben werden. Gibt 31 zurück, wenn nicht gefunden.
 
-MakeCode Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
+MakeCode Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]\
+ROBO Pro Coding Block **ascii_to_array10** (ascii_code) : boolean[]
+
 * Gibt ein Array mit 10 boolean Elementen (wahr/falsch) zurück.
 * 1 Start, 7 Daten 2^0..2^6, 1 Parität, 1 Stop-Bit
 * negative Logik: 0=wahr und 1=falsch
 * Bedeutung ist im Bild oben erklärt.
 
-MakeCode Block **sende Array von ...** (array_10bit: boolean[])
+MakeCode Block **sende Array von ...** (array_10bit: boolean[])\
+ROBO Pro Coding Block **rs232_sende10bit** (array_10bit: boolean[])
+
 * Sendet das *array_10bit* über die LED als `Licht an` oder `Licht aus`.
 * Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
 * Normalerweise wird als Parameter eine boolean[] Variable oder Funktion übergeben.
