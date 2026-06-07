@@ -179,7 +179,8 @@ ROBO Pro Coding Block **log_array_tostring** (array_10bit: boolean[]) : string
 * Nach Bit 0 und 7 wird ein ^ eingefügt zur Abgrenzung der Daten-Bits.
 
 MakeCode Block **zwischen** (i0, i1, i2) : boolean
-* Gibt wahr zurück, wenn *i0* zwischen *i1* und *i2* liegt.
+* Alle 3 Parameter sind Zahlen (number).
+* Gibt wahr zurück, wenn *i0* zwischen *i1* und *i2* liegt (between).
 
 MakeCode Block **Kommentar** (text)
 * Einfügen von Kommentar in die Blöcke. Hat keine Funktion.
