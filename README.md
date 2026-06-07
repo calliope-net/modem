@@ -43,21 +43,24 @@ Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeiche
 
 ### beim Start
 
-Block **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
+MakeCode Block **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
 * Definiert beim Start die Pins für LED und Fototransistor und den analogen Wert für hell.
 * *pin_led*: DigitalPin, *pin_fototransistor*: AnalogPin
 * optional *helligkeit*: number default=150 
 
-Block **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
+MakeCode Block **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
 * Definiert beim Start die Zeit, wie lange das Licht für ein Bit an oder aus ist.
 * *takt_ms*: Millisekunden default=400 ms
 * optional *start_bit_time*, *stop_bits*
 
 ### Senden (LED)
 
-Block **sende 1 Zeichen ASCII Code** (ascii_code)
+MakeCode Block **sende 1 Zeichen ASCII Code** (ascii_code)\
+ROBO Pro Coding Block **ascii_sende_code** (ascii_code, mit_log)
+
 * Sendet 1 Zeichen (Code)
 * *ascii_code*: 32..127 oder 13 für ENTER
+* *mit_log*: wahr/falsch protokolliert jedes Zeichen in Konsole
 
 Block **sende Text Zeile mit ↵ ENTER** (text)
 * Sendet alle Zeichen aus *text* und hängt ENTER (13) an.
