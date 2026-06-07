@@ -147,16 +147,23 @@ ROBO Pro Coding Block **rs232_sende10bit** (array_10bit: boolean[])
 
 ### Empfangen (1 Start, 7 Daten 2^0..2^6, 1 Parität, 1 Stop-Bit)
 
-MakeCode Block **Text-Zeichen aus ASCII Code** (ascii_code) : string
-* Gibt das Zeichen zum *ascii_code* zurück. Genau 1 Zeichen.
+MakeCode Block **Text-Zeichen aus ASCII Code** (ascii_code) : string\
+ROBO Pro Coding Block **ascii_chr** (ascii_code) : string
 
-Block **ASCII Code aus Array von ...** (array_10bit: boolean[]) : number
+* Gibt das Zeichen zum *ascii_code* zurück. Genau 1 Zeichen.
+* ROBO Pro Coding nur 32..127, sonst \|ascii_code\|
+
+Block **ASCII Code aus Array von ...** (array_10bit: boolean[]) : number\
+ROBO Pro Coding Block **ascii_from_array10** (array_10bit: boolean[]) : number
+
 * Decodiert das Array mit 10 boolean Elementen (wahr/falsch) in den ASCII Code.
 * Bei Fehler werden die Codes -1 .. -4 in der Tabelle oben zurück gegeben.
 * Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
 * Normalerweise wird als Parameter eine boolean[] Variable oder Funktion übergeben.
 
-MakeCode Block **empfange 10 Bit Array** : boolean[]
+MakeCode Block **empfange 10 Bit Array** : boolean[]\
+ROBO Pro Coding Block **rs232_empfange10bit** : boolean[]
+
 * Wartet auf Start-Bit und gibt nach Empfang das 10-bit-Array zurück.
 * Funktion blockiert und kann (in einem anderen Thread) abgebrochen werden.
 * Bei Abbruch hat das Array keine oder weniger als 10 Elemente.
@@ -164,7 +171,9 @@ MakeCode Block **empfange 10 Bit Array** : boolean[]
 
 ### Funktionen
 
-MakeCode Block **Array von ... to Bin-String** : string
+MakeCode Block **Array von ... to Bin-String** (array_10bit: boolean[]) : string\
+ROBO Pro Coding Block **log_array_tostring** (array_10bit: boolean[]) : string
+
 * Konvertiert ein boolean[] Array in einen String aus Nullen und Einsen (wahr = 0 und falsch = 1).
 * Dient nur zur Anzeige, wird nicht zur Datenübertragung benötigt.
 * Nach Bit 0 und 7 wird ein ^ eingefügt zur Abgrenzung der Daten-Bits.
