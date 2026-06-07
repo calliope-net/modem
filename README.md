@@ -125,6 +125,7 @@ ROBO Pro Coding Block **ascii_ord** (ascii_zeichen) : number
   * Gibt den ASCII Code des (ersten) Zeichens in *text* zurück oder NaN wenn nicht gefunden.
   * Bei mehreren Zeichen gibt der *index* die Position des Zeichens in *text* an.
 * ROBO Pro Coding
+  * Gibt den ASCII Code von ascii_zeichen zurück. Nur Code 32..127 ist möglich.
   * Es darf nur genau 1 Zeichen (char) übergeben werden. Gibt 31 zurück, wenn nicht gefunden.
 
 MakeCode Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]\
