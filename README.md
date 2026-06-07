@@ -43,10 +43,10 @@ Pro ASCII Zeichen werden immer 10 Bit übertragen. Die Pause zwischen den Zeiche
 
 ### beim Start
 
-MakeCode Block **Pins:** (pin_led, pin_fototransistor, helligkeit=150)
+MakeCode Block **Pins:** (pin_led, pin_fototransistor, helligkeit=20)
 * Definiert beim Start die Pins für LED und Fototransistor und den analogen Wert für hell.
 * *pin_led*: DigitalPin, *pin_fototransistor*: AnalogPin
-* optional *helligkeit*: number default=150 
+* optional *helligkeit*: number default=20
 
 MakeCode Block **Takt:** (takt_ms, start_bit_time=0.5, stop_bits=1)
 * Definiert beim Start die Zeit, wie lange das Licht für ein Bit an oder aus ist.
