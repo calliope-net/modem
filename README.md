@@ -93,14 +93,14 @@ ROBO Pro Coding Block **ascii_empfange_text_bis13** (mit_log) : string
 * Codes 0..31 und Fehler-Codes -1..-4 werden in den Text als \|27\| oder \|-1\| eingefügt.
 * *mit_log*: wahr/falsch protokolliert jedes Zeichen in Konsole (nur ROBO Pro Coding)
 
-> Die zwei Funktionen **empfange** blockieren das Programm. Es reagiert nicht mehr, bis der Fototransistor ein Start-Bit (Licht an) empfangen hat.
+> Die zwei Funktionen **empfange** blockieren das Programm bis der Fototransistor ein Start-Bit (Licht an) empfangen hat.
 > Mit der folgenden Funktion kann vorher in einer eigenen Schleife erkannt werden, ob der Fototransistor hell ist, also der Empfang beginnt.
 
 MakeCode Block **empfange 1 Bit (warten auf Startbit)** : boolean\
 ROBO Pro Coding Block **rs232_empfange1bit** : boolean
 
-* Gibt wahr zurück, wenn der Fototransistor ein Start-Bit erkannt hat. (blockiert nicht)
-* Danach muss sofort **empfange 1 Zeichen** oder **empfange Text** aufgerufen werden. (blockiert)
+* Gibt wahr zurück, wenn der Fototransistor ein Start-Bit erkannt hat (blockiert nicht).
+* Danach muss sofort **empfange 1 Zeichen** oder **empfange Text** aufgerufen werden (blockiert).
 
 MakeCode Block **Empfangen abbrechen** (abbrechen = true)\
 ROBO Pro Coding Block **ascii_abbrechen** (abbrechen)
@@ -108,7 +108,7 @@ ROBO Pro Coding Block **ascii_abbrechen** (abbrechen)
 * Kann eine blockierte Funktion **empfange** abbrechen.
 * Muss dazu in einem anderen Thread aufgerufen werden, z.B. **wenn Knopf B geklickt**.
 * Führt zum Fehlercode \|-1\|, weil keine Daten empfangen wurden.
-* Parameter: wahr=abbrechen; falsch setzt setzt abbrechen zurück.
+* Parameter: wahr=abbrechen; falsch setzt abbrechen zurück.
 
 
 ## Blöcke (mehr)
