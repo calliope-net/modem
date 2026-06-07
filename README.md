@@ -186,7 +186,7 @@ MakeCode Block **Kommentar** (text)
 * Einfügen von Kommentar in die Blöcke. Hat keine Funktion.
 
 
-## Als Erweiterung verwenden
+## Als MakeCode Erweiterung verwenden
 
 Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 
@@ -195,7 +195,7 @@ Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 * klicke auf **Erweiterungen** unter dem Zahnrad-Menü
 * nach **https://github.com/calliope-net/modem** suchen und importieren
 
-## Dieses Projekt bearbeiten ![Build status badge](https://github.com/calliope-net/modem/workflows/MakeCode/badge.svg)
+## Dieses MakeCode Projekt bearbeiten ![Build status badge](https://github.com/calliope-net/modem/workflows/MakeCode/badge.svg)
 
 Um dieses Repository in MakeCode zu bearbeiten.
 
