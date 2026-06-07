@@ -118,9 +118,12 @@ ROBO Pro Coding Block **ascii_abbrechen** (abbrechen)
 
 ### Senden (ASCII Code 32..127)
 
-MakeCode Block **ASCII Code aus Text** (text, index) : number
+MakeCode Block **ASCII Code aus Text** (text, index) : number\
+ROBO Pro Coding Block **ascii_ord** (ascii_zeichen) : number
+
 * Gibt den ASCII Code des (ersten) Zeichens in *text* zurück.
 * Bei mehreren Zeichen gibt der *index* die Position des Zeichens in *text* an.
+* Bei ROBO Pro Coding darf nur genau 1 Zeichen (char) übergeben werden. Gibt 31 zurück, wenn nicht gefunden.
 
 MakeCode Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
 * Gibt ein Array mit 10 boolean Elementen (wahr/falsch) zurück.
