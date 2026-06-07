@@ -62,13 +62,20 @@ ROBO Pro Coding Block **ascii_sende_code** (ascii_code, mit_log)
 * *ascii_code*: 32..127 oder 13 für ENTER
 * *mit_log*: wahr/falsch protokolliert jedes Zeichen in Konsole
 
-Block **sende Text Zeile mit ↵ ENTER** (text)
-* Sendet alle Zeichen aus *text* und hängt ENTER (13) an.
+MakeCode Block **sende Text Zeile mit ↵ ENTER** (text)\
+ROBO Pro Coding Block **ascii_sende_text_mit13** (text, mit_log)
+
+* Sendet jedes Zeichen aus *text* und hängt ENTER (13) an.
+* *mit_log*: wahr/falsch protokolliert jedes Zeichen in Konsole
 
 ### Empfangen (Fototransistor)
 
-Block **empfange 1 Zeichen ASCII Code (oder Fehlercode)** : number
+MakeCode Block **empfange 1 Zeichen ASCII Code** : number\
+ROBO Pro Coding Block **ascii_empfange_code** : number
+
 * Wartet auf Start-Bit und gibt nach Empfang den ASCII-Code (0..127) zurück.
+* Blockiert den Thread bis Fototransistor hell. Kann durch anderen Thread abgebrochen werden.
+* Empfang-Fehler geben folgende Codes zurück:
 
 Fehlercode|Fehler
 ---|---
@@ -77,7 +84,7 @@ Fehlercode|Fehler
 -3|Parity-Bit Fehler
 -4|Stop-Bit Fehler
 
-Block **empfange Text Zeile bis ↵ ENTER** : string
+MakeCode Block **empfange Text Zeile bis ↵ ENTER** : string
 * Wartet auf Start-Bit und empfängt alle Zeichen bis ENTER (13).
 * Gibt dann den Text (ohne ENTER) zurück.
 * Gültige ASCII-Codes 32..127 werden in das Zeichen umgewandelt.
@@ -86,11 +93,11 @@ Block **empfange Text Zeile bis ↵ ENTER** : string
 > Die zwei Funktionen **empfange** blockieren das Programm. Es reagiert nicht mehr, bis der Fototransistor ein Start-Bit (Licht an) empfangen hat.
 > Mit der folgenden Funktion kann in einer eigenen Schleife erkannt werden, ob der Fototransistor hell ist, also der Empfang beginnt.
 
-Block **empfange 1 Bit (warten auf Startbit)** : boolean
+MakeCode Block **empfange 1 Bit (warten auf Startbit)** : boolean
 * Gibt wahr zurück, wenn der Fototransistor ein Start-Bit erkannt hat. (blockiert nicht)
 * Danach muss sofort **empfange 1 Zeichen** oder **empfange Text** aufgerufen werden. (blockiert)
 
-Block **Empfangen abbrechen**
+MakeCode Block **Empfangen abbrechen**
 * Kann eine blockierte Funktion **empfange** abbrechen.
 * Muss dazu in einem anderen Thread aufgerufen werden, z.B. **wenn Knopf B geklickt**.
 * Führt zum Fehlercode \|-1\|, weil keine Daten empfangen wurden.
@@ -103,17 +110,17 @@ Block **Empfangen abbrechen**
 
 ### Senden (ASCII Code 32..127)
 
-Block **ASCII Code aus Text** (text, index) : number
+MakeCode Block **ASCII Code aus Text** (text, index) : number
 * Gibt den ASCII Code des (ersten) Zeichens in *text* zurück.
 * Bei mehreren Zeichen gibt der *index* die Position des Zeichens in *text* an.
 
-Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
+MakeCode Block **10 Bit Array aus ASCII Code** (ascii_code) : boolean[]
 * Gibt ein Array mit 10 boolean Elementen (wahr/falsch) zurück.
 * 1 Start, 7 Daten 2^0..2^6, 1 Parität, 1 Stop-Bit
 * negative Logik: 0=wahr und 1=falsch
 * Bedeutung ist im Bild oben erklärt.
 
-Block **sende Array von ...** (array_10bit: boolean[])
+MakeCode Block **sende Array von ...** (array_10bit: boolean[])
 * Sendet das *array_10bit* über die LED als `Licht an` oder `Licht aus`.
 * Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
 * Normalerweise wird als Parameter eine boolean[] Variable oder Funktion übergeben.
@@ -122,7 +129,7 @@ Block **sende Array von ...** (array_10bit: boolean[])
 
 ### Empfangen (1 Start, 7 Daten 2^0..2^6, 1 Parität, 1 Stop-Bit)
 
-Block **Text-Zeichen aus ASCII Code** (ascii_code) : string
+MakeCode Block **Text-Zeichen aus ASCII Code** (ascii_code) : string
 * Gibt das Zeichen zum *ascii_code* zurück. Genau 1 Zeichen.
 
 Block **ASCII Code aus Array von ...** (array_10bit: boolean[]) : number
@@ -131,7 +138,7 @@ Block **ASCII Code aus Array von ...** (array_10bit: boolean[]) : number
 * Zum Testen können die boolean Elemente auch direkt im Block eingestellt werden.
 * Normalerweise wird als Parameter eine boolean[] Variable oder Funktion übergeben.
 
-Block **empfange 10 Bit Array** : boolean[]
+MakeCode Block **empfange 10 Bit Array** : boolean[]
 * Wartet auf Start-Bit und gibt nach Empfang das 10-bit-Array zurück.
 * Funktion blockiert und kann (in einem anderen Thread) abgebrochen werden.
 * Bei Abbruch hat das Array keine oder weniger als 10 Elemente.
@@ -139,15 +146,15 @@ Block **empfange 10 Bit Array** : boolean[]
 
 ### Funktionen
 
-Block **Array von ... to Bin-String** : string
+MakeCode Block **Array von ... to Bin-String** : string
 * Konvertiert ein boolean[] Array in einen String aus Nullen und Einsen (wahr = 0 und falsch = 1).
 * Dient nur zur Anzeige, wird nicht zur Datenübertragung benötigt.
 * Nach Bit 0 und 7 wird ein ^ eingefügt zur Abgrenzung der Daten-Bits.
 
-Block **zwischen** (i0, i1, i2) : boolean
+MakeCode Block **zwischen** (i0, i1, i2) : boolean
 * Gibt wahr zurück, wenn *i0* zwischen *i1* und *i2* liegt.
 
-Block **Kommentar** (text)
+MakeCode Block **Kommentar** (text)
 * Einfügen von Kommentar in die Blöcke. Hat keine Funktion.
 
 
