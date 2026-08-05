@@ -14,8 +14,8 @@ namespace modem // modem.ts
 
     Lutz Elßner März, August 2026
 */ {
-    export let q_pin_led: DigitalPin = DigitalPin.P1
-    export let q_pin_fototransistor: AnalogPin = AnalogPin.P2 // dunkel~860 / hell~20 / Calliope v2
+    export let q_pin_led: DigitalPin = DigitalPin.C17
+    export let q_pin_fototransistor: AnalogPin = AnalogPin.C16 // dunkel~860 / hell~20 / Calliope v2
     export let q_helligkeit: number = 20 // 150
     export let q_takt_ms: number = 400 // Takt zwischen 2 Calliope: 20ms / zum BT Smart Controller: 400ms
     export let q_start_bit_time: number = 0.5 // 0.5 oder 0.45 zwischen Beginn Startbit und einlesen
@@ -27,7 +27,7 @@ namespace modem // modem.ts
 
     //% group="asynchrone serielle Datenübertragung mit Licht"
     //% block="Pins: LED %pin_led Fototransistor %pin_fototransistor || Helligkeit < %helligkeit" weight=5
-    //% pin_led.defl=DigitalPin.P1 pin_fototransistor.defl=AnalogPin.P2
+    //% pin_led.defl=DigitalPin.C17 pin_fototransistor.defl=AnalogPin.C16
     export function set_pins(pin_led: DigitalPin, pin_fototransistor: AnalogPin, helligkeit?: number) {
         q_pin_led = pin_led
         q_pin_fototransistor = pin_fototransistor
@@ -138,5 +138,10 @@ namespace modem // modem.ts
         n_empf_abbrechen = abbrechen
     }
 
+    //% group="Empfangen (Fototransistor)"
+    //% block="Empfangen abbrechen" weight=1
+    export function empf_abbrechen() {
+        return n_empf_abbrechen
+    }
 
 } // modem.ts
