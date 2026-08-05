@@ -12,16 +12,15 @@ namespace modem // modem.ts
     https://calliope-net.github.io/rs232-e41/
     https://calliope-net.github.io/rs232-e41/rs232.png
 
-    Lutz Elßner März 2026
+    Lutz Elßner März, August 2026
 */ {
-    let q_pin_led: DigitalPin = DigitalPin.P1
-    let q_pin_fototransistor: AnalogPin = AnalogPin.P2 // dunkel~860 / hell~20 / Calliope v2
-    let q_helligkeit: number = 20 // 150
+    export let q_pin_led: DigitalPin = DigitalPin.P1
+    export let q_pin_fototransistor: AnalogPin = AnalogPin.P2 // dunkel~860 / hell~20 / Calliope v2
+    export let q_helligkeit: number = 20 // 150
     export let q_takt_ms: number = 400 // Takt zwischen 2 Calliope: 20ms / zum BT Smart Controller: 400ms
     export let q_start_bit_time: number = 0.5 // 0.5 oder 0.45 zwischen Beginn Startbit und einlesen
     export let q_stop_bits: number = 1
     export let n_empf_abbrechen: boolean = false // warten auf Startbit beim Empfang abbrechen
-
 
 
     // ========== group="asynchrone serielle Datenübertragung mit Licht"

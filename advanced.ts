@@ -166,6 +166,31 @@ namespace modem // advanced.ts
 
     // ========== group="Funktionen" advanced=true blockGap=8
 
+    export enum e_settings {
+        pin_led,
+        pin_fototransistor,
+        helligkeit,
+        takt_ms,
+        start_bit_time,
+        stop_bits
+    }
+
+    //% group="Funktionen" advanced=true
+    //% block="Variable %e" weight=6
+    export function get_settings(e: e_settings) {
+        switch (e) {
+            case e_settings.pin_led: { return q_pin_led }
+            case e_settings.pin_fototransistor: { return q_pin_fototransistor }
+            case e_settings.helligkeit: { return q_helligkeit }
+            case e_settings.takt_ms: { return q_takt_ms }
+            case e_settings.start_bit_time: { return q_start_bit_time }
+            case e_settings.stop_bits: { return q_stop_bits }
+            default: { return undefined }
+        }
+    }
+
+
+
     //% group="Funktionen" advanced=true
     //% block="%array_10bit to Bin-String" weight=5
     export function array_tostring(array_10bit: boolean[]): string {
