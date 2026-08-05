@@ -27,11 +27,14 @@ namespace modem // modem.ts
 
     //% group="asynchrone serielle Datenübertragung mit Licht"
     //% block="Pins: LED %pin_led Fototransistor %pin_fototransistor || Helligkeit < %helligkeit" weight=5
-    //% pin_led.defl=DigitalPin.P1 pin_fototransistor.defl=AnalogPin.P2 helligkeit.defl=20
-    export function set_pins(pin_led: DigitalPin, pin_fototransistor: AnalogPin, helligkeit = 20) {
+    //% pin_led.defl=DigitalPin.P1 pin_fototransistor.defl=AnalogPin.P2
+    export function set_pins(pin_led: DigitalPin, pin_fototransistor: AnalogPin, helligkeit: number) {
         q_pin_led = pin_led
         q_pin_fototransistor = pin_fototransistor
-        q_helligkeit = helligkeit
+        if (helligkeit === undefined)
+            q_helligkeit = Math.idiv(pins.analogReadPin(q_pin_fototransistor), 2) // Schwellwert = dunkel / 2
+        else
+            q_helligkeit = helligkeit
     }
 
     //% group="asynchrone serielle Datenübertragung mit Licht"
